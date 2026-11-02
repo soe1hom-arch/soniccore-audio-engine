@@ -73,10 +73,9 @@ CMake 3.22.1, and Gradle available, build it with:
 The resulting AAR contains the Kotlin Media3 adapter and the native SonicCore
 JNI library for the ABIs configured by the Android toolchain.
 
-The `demo` application is a deterministic hardware test surface. It generates
-a 440 Hz stereo tone and exposes bypass, spatial, room reverb, and bass controls
-so DSP behavior can be checked on headphones, speakers, and Bluetooth output
-before integrating a real media decoder.
+The `demo` application includes a local-file Media3 player. Choose an MP3,
+FLAC, or other Android-supported audio file, then compare bypass, spatial, room
+reverb, and bass on headphones, speakers, and Bluetooth output.
 
 System-wide ROM work is documented in [android/hal/README.md](android/hal/README.md).
 It requires a target-specific AIDL/HIDL Effects HAL integration and should not
