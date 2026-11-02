@@ -23,4 +23,8 @@ if(BUILD_TESTING AND SONICCORE_BUILD_TESTS)
     add_executable(soniccore_quality_test ../tests/quality_test.cpp)
     target_link_libraries(soniccore_quality_test PRIVATE soniccore)
     add_test(NAME soniccore_quality_test COMMAND soniccore_quality_test)
+
+    add_executable(soniccore_golden_test ../tests/golden_test.cpp)
+    target_link_libraries(soniccore_golden_test PRIVATE soniccore)
+    add_test(NAME soniccore_golden_test COMMAND soniccore_golden_test)
 endif()
