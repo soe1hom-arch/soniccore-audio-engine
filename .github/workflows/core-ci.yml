@@ -43,6 +43,8 @@ jobs:
             "cmake;3.22.1" "ndk;27.0.12077973"
       - name: Build release AAR
         run: ./gradlew :android:assembleRelease :demo:assembleDebug --no-daemon --stacktrace
+      - name: Package root module
+        run: bash scripts/package-root-module.sh
       - name: Upload Android artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -51,3 +53,4 @@ jobs:
           path: |
             android/build/outputs/aar/*.aar
             demo/build/outputs/apk/debug/*.apk
+            build/releases/*.zip

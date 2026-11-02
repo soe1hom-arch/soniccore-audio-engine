@@ -81,6 +81,10 @@ System-wide ROM work is documented in [android/hal/README.md](android/hal/README
 It requires a target-specific AIDL/HIDL Effects HAL integration and should not
 be assumed to work from an ordinary APK alone.
 
+An experimental Magisk/KernelSU foundation is documented in
+[docs/ROOT_MODULE.md](docs/ROOT_MODULE.md). It is disabled by default and does
+not change vendor audio configuration until a device adapter is supplied.
+
 ## Android integration direction
 
 The Android adapter will expose the same engine through a small JNI boundary first. A separate platform adapter can later connect it to an app audio session or an AOSP/vendor Effects HAL. The adapter must handle lifecycle, session ownership, format conversion, underrun recovery, and coexistence with other vendor effects; these concerns do not belong in the DSP core.

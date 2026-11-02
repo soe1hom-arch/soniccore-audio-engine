@@ -1,0 +1,8 @@
+id=soniccore-root
+name=SonicCore Root Audio Foundation
+version=0.1.0
+versionCode=1
+author=soe1hom-arch
+description=Reversible Magisk/KernelSU foundation for SonicCore audio integration. Disabled by default until a device adapter is installed.
+updateJson=https://api.github.com/repos/soe1hom-arch/soniccore-audio-engine/releases/latest
+
