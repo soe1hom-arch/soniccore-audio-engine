@@ -68,6 +68,11 @@ CMake 3.22.1, and Gradle available, build it with:
 The resulting AAR contains the Kotlin Media3 adapter and the native SonicCore
 JNI library for the ABIs configured by the Android toolchain.
 
+The `demo` application is a deterministic hardware test surface. It generates
+a 440 Hz stereo tone and exposes bypass, spatial, room reverb, and bass controls
+so DSP behavior can be checked on headphones, speakers, and Bluetooth output
+before integrating a real media decoder.
+
 ## Android integration direction
 
 The Android adapter will expose the same engine through a small JNI boundary first. A separate platform adapter can later connect it to an app audio session or an AOSP/vendor Effects HAL. The adapter must handle lifecycle, session ownership, format conversion, underrun recovery, and coexistence with other vendor effects; these concerns do not belong in the DSP core.

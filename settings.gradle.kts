@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "soniccore-audio-engine"
 include(":android")
+include(":demo")
