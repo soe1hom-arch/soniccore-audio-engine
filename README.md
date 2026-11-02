@@ -21,6 +21,11 @@ SonicCore does not copy or emulate Dolby Atmos, Dirac, or another proprietary pr
 - a stable C/C++ API suitable for JNI and platform adapters;
 - Android-specific integrations kept outside the portable DSP core.
 
+The engine also ships conservative profiles, deterministic regression tests,
+and a benchmark smoke test. Profiles are starting points, not loudness
+presets; the safety limiter remains enabled and hosts should loudness-match
+comparisons.
+
 ## Initial processing chain
 
 The first engine version defines this order:
@@ -72,6 +77,10 @@ The `demo` application is a deterministic hardware test surface. It generates
 a 440 Hz stereo tone and exposes bypass, spatial, room reverb, and bass controls
 so DSP behavior can be checked on headphones, speakers, and Bluetooth output
 before integrating a real media decoder.
+
+System-wide ROM work is documented in [android/hal/README.md](android/hal/README.md).
+It requires a target-specific AIDL/HIDL Effects HAL integration and should not
+be assumed to work from an ordinary APK alone.
 
 ## Android integration direction
 

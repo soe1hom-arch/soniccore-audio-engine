@@ -7,6 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(soniccore STATIC
     src/sonic_core.cpp
+    src/profiles.cpp
 )
 
 target_include_directories(soniccore PUBLIC include)
@@ -27,4 +28,8 @@ if(BUILD_TESTING AND SONICCORE_BUILD_TESTS)
     add_executable(soniccore_golden_test ../tests/golden_test.cpp)
     target_link_libraries(soniccore_golden_test PRIVATE soniccore)
     add_test(NAME soniccore_golden_test COMMAND soniccore_golden_test)
+
+    add_executable(soniccore_performance_test ../tests/performance_test.cpp)
+    target_link_libraries(soniccore_performance_test PRIVATE soniccore)
+    add_test(NAME soniccore_performance_test COMMAND soniccore_performance_test)
 endif()

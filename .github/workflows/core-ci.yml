@@ -21,6 +21,8 @@ jobs:
         run: cmake --build build/core --parallel
       - name: Test
         run: ctest --test-dir build/core --output-on-failure
+      - name: Benchmark smoke
+        run: build/core/soniccore_performance_test
 
   android-library:
     name: Android library

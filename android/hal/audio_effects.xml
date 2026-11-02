@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template only. Replace UUID/library names in the target device tree. -->
+<audio_effects_conf version="2.0">
+    <libraries>
+        <library name="soniccore" path="libsoniccore_effect.so" />
+    </libraries>
+    <effects>
+        <!-- Generate and register a real UUID for the device integration. -->
+        <effect name="soniccore" library="soniccore" uuid="00000000-0000-0000-0000-000000000000" />
+    </effects>
+</audio_effects_conf>
+
