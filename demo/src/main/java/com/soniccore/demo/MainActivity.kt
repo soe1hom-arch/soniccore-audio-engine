@@ -5,7 +5,6 @@
 
 package com.soniccore.demo
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -14,17 +13,18 @@ import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.Switch
 import android.widget.TextView
+import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.media3.common.MediaItem
 import androidx.media3.common.audio.AudioProcessor
-import androidx.media3.common.audio.AudioSink
 import androidx.media3.exoplayer.DefaultRenderersFactory
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.audio.AudioSink
 import androidx.media3.exoplayer.audio.DefaultAudioSink
 import com.soniccore.android.SonicCoreAudioProcessor
 
 /** Small local-file player for validating SonicCore against real music. */
-class MainActivity : Activity() {
+class MainActivity : ComponentActivity() {
     private val effects = SonicCoreAudioProcessor()
     private lateinit var player: ExoPlayer
     private lateinit var status: TextView

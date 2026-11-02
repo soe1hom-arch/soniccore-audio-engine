@@ -29,5 +29,6 @@ android {
 
 dependencies {
     implementation(project(":android"))
+    implementation("androidx.activity:activity:1.9.3")
     implementation("androidx.media3:media3-exoplayer:1.5.0")
 }
